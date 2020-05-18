@@ -32,23 +32,19 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Open Sans';
-  font-size: 26px;
-  line-height: 34px;
-  /* font-family: 'Roboto Slab'; */
+  font-size: 23px;
+  line-height: 33px;
 }
 .section {
   margin: 0 9vw;
 }
 h1 {
   display: block;
-  font-size: 48px;
-  line-height: 65px;
+  font-size: 42px;
+  line-height: 54px;
   margin: 30px 0;
   color: black;
   font-weight: normal;
-}
-p {
-  /* font-size: 22px; */
 }
 .link {
   color: rgb(0, 0, 200);
@@ -66,7 +62,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  font: 26px/33px "Open Sans";
+  font: 23px/33px "Open Sans";
   font-weight: 100;
   color: #595959;
   letter-spacing: 1.56px;
