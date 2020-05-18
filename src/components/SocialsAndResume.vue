@@ -1,16 +1,26 @@
 <template>
   <div class="social">
     <h1>Find me on</h1>
-    <img class="icon" src="@/assets/github.png">
-    <img class="icon" src="@/assets/linkedin.png">
+    <img class="icon" @click="goToGithub" src="@/assets/github.png">
+    <img class="icon" @click="goToLinkedin" src="@/assets/linkedin.png">
     <div class="divider" />
-    <div class="minor btn">Printable Resume</div>
+    <div class="minor btn" @click="goToResume">Printable Resume</div>
   </div>
 </template>
 
 <script>
 export default {
-
+  methods: {
+    goToGithub() {
+      window.open('https://github.com/etekweb', '_blank');
+    },
+    goToLinkedin() {
+      window.open('https://www.linkedin.com/in/ethan-matzdorf-9493b4137/', '_blank');
+    },
+    goToResume() {
+      // TODO - Add link to page when added
+    }
+  }
 };
 </script>
 
@@ -27,7 +37,9 @@ export default {
 .icon {
   width: 88px;
   height: 88px;
+  border-radius: 50%;
   margin: 0 0 0 25px;
+  cursor: pointer;
 }
 .divider {
   width: 1px;

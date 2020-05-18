@@ -14,6 +14,7 @@
       </p>
       <p>
         In college, I have been working for 24G, a digital experience agency, as a JavaScript developer.<br>
+        <!-- TODO - add link to section when added -->
         <span class="link">See what I did there</span>.
       </p>
     </div>
