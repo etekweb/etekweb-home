@@ -3,6 +3,7 @@
     <TheHeader />
     <AboutSection />
     <SocialsAndResume />
+    <ExperienceSection />
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import TheHeader from '@/components/TheHeader.vue';
 import AboutSection from '@/components/AboutSection.vue';
 import SocialsAndResume from '@/components/SocialsAndResume.vue';
+import ExperienceSection from '@/components/ExperienceSection.vue';
 
 export default {
   name: 'App',
   components: {
     TheHeader,
     AboutSection,
-    SocialsAndResume
+    SocialsAndResume,
+    ExperienceSection
   }
 };
 </script>
@@ -29,18 +32,23 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Open Sans';
-  font-size: 28px;
+  font-size: 26px;
+  line-height: 34px;
   /* font-family: 'Roboto Slab'; */
+}
+.section {
+  margin: 0 9vw;
 }
 h1 {
   display: block;
-  font-size: 42px;
-  margin: 20px 0;
+  font-size: 48px;
+  line-height: 65px;
+  margin: 30px 0;
   color: black;
   font-weight: normal;
 }
 p {
-  font-size: 22px;
+  /* font-size: 22px; */
 }
 .link {
   color: rgb(0, 0, 200);
