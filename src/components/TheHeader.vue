@@ -14,10 +14,13 @@ export default {
 .header {
   width: 100%;
   min-height: 400px;
-  height: 50vh;
+  max-height: 50vh;
   background-image: url('../assets/banner.jpg');
   background-position-y: bottom;
   background-size: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
   display: flex;
   align-items: center;
   justify-content: center;

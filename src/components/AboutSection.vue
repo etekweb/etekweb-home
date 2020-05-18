@@ -39,4 +39,15 @@
   width: 22vw;
   align-self: center;
 }
+@media screen and (max-width: 1114px) {
+  .about {
+    flex-direction: column;
+  }
+  .about-text {
+    max-width: unset;
+  }
+  .profile-img {
+    width: 34vw;
+  }
+}
 </style>
