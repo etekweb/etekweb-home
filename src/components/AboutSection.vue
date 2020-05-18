@@ -39,7 +39,7 @@
   width: 22vw;
   align-self: center;
 }
-@media screen and (max-width: 1114px) {
+@media screen and (max-width: 1360px) {
   .about {
     flex-direction: column;
   }
@@ -48,6 +48,17 @@
   }
   .profile-img {
     width: 34vw;
+  }
+}
+@media screen and (max-width: 1015px) {
+  .profile-img {
+    width: 50vw;
+    max-width: 345px;
+  }
+}
+@media screen and (max-width: 670px) {
+  .profile-img {
+    width: 100%;
   }
 }
 </style>

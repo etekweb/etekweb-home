@@ -27,5 +27,6 @@ export default {
   font: 70px/96px 'Open Sans';
   letter-spacing: 0px;
   color: #FFFFFF;
+  text-align: center;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div class="social">
     <h1>Find me on</h1>
-    <img class="icon" @click="goToGithub" src="@/assets/github.png">
-    <img class="icon" @click="goToLinkedin" src="@/assets/linkedin.png">
+    <img class="icon gh" @click="goToGithub" src="@/assets/github.png">
+    <img class="icon li" @click="goToLinkedin" src="@/assets/linkedin.png">
     <div class="divider" />
     <div class="minor btn" @click="goToResume">Printable Resume</div>
   </div>
@@ -41,8 +41,8 @@ h1 {
   margin: unset;
 }
 .icon {
-  width: 88px;
-  height: 88px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -72,6 +72,12 @@ h1 {
   }
   .icon {
     grid-row: 2 / 3;
+  }
+  .icon.gh {
+    justify-self: right;
+  }
+  .icon.li {
+    justify-self: left;
   }
   .minor.btn {
     grid-row: 3 / 4;
