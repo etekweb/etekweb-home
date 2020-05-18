@@ -4,6 +4,7 @@
     <AboutSection />
     <SocialsAndResume />
     <ExperienceSection />
+    <ProjectsSection />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import TheHeader from '@/components/TheHeader.vue';
 import AboutSection from '@/components/AboutSection.vue';
 import SocialsAndResume from '@/components/SocialsAndResume.vue';
 import ExperienceSection from '@/components/ExperienceSection.vue';
+import ProjectsSection from '@/components/ProjectsSection.vue';
 
 export default {
   name: 'App',
@@ -19,7 +21,8 @@ export default {
     TheHeader,
     AboutSection,
     SocialsAndResume,
-    ExperienceSection
+    ExperienceSection,
+    ProjectsSection
   }
 };
 </script>
@@ -66,5 +69,22 @@ h1 {
   font-weight: 100;
   color: #595959;
   letter-spacing: 1.56px;
+}
+.circle-btn {
+  width: 129px;
+  height: 129px;
+  background-color: white;
+  border: 1px solid #707070;
+  border-radius: 50%;
+  text-align: center;
+  font: 26px/33px 'Open Sans';
+  font-weight: 100;
+  letter-spacing: 1.56px;
+  color: #595959;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

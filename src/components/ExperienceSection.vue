@@ -1,6 +1,6 @@
 <template>
   <div class="experience section">
-    <h1>Experience</h1>
+    <h1>Work Experience</h1>
     <p class="first">
       <b>Northland Designs</b><br>
       In this position, I worked closely with a variety of local businesses 
