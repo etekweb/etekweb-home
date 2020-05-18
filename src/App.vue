@@ -13,7 +13,7 @@
         From there, I took initiative in developing web projects for my community that are in production use today: a registration utility for a middle school enrichment class program, and a trail map system at a local park.
       </p>
       <p>
-        In college, I have been working for 24G, a digital experience agency, as a JavaScript developer. 
+        In college, I have been working for 24G, a digital experience agency, as a JavaScript developer.<br>
         <span class="link">See what I did there</span>.
       </p>
     </div>
@@ -47,17 +47,17 @@ html, body {
 }
 h1 {
   display: block;
-  font-size: 48px;
-  margin: 30px 0;
+  font-size: 42px;
+  margin: 20px 0;
   color: black;
   font-weight: normal;
 }
 p {
-  font-size: 28px;
+  font-size: 22px;
 }
 .about {
   margin-top: 55px;
-  margin-left: 16vw;
+  margin-left: 9vw;
   max-width: 57vw;
 }
 .link {
