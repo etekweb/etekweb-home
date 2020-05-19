@@ -5,7 +5,6 @@
     <SocialsAndResume />
     <ExperienceSection />
     <ProjectsSection />
-    <BlogSection />
   </div>
 </template>
 
@@ -15,7 +14,6 @@ import AboutSection from '@/components/AboutSection.vue';
 import SocialsAndResume from '@/components/SocialsAndResume.vue';
 import ExperienceSection from '@/components/ExperienceSection.vue';
 import ProjectsSection from '@/components/ProjectsSection.vue';
-import BlogSection from '@/components/BlogSection.vue';
 
 export default {
   name: 'App',
@@ -25,7 +23,6 @@ export default {
     SocialsAndResume,
     ExperienceSection,
     ProjectsSection,
-    BlogSection
   }
 };
 </script>
