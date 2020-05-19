@@ -27,7 +27,7 @@ export default {
 <style scoped>
 .social {
   margin: 57px 0 47px 0;
-  padding: 18px 0;
+  padding: 32px 0;
   width: 100%;
   background-color: #F0F2F2;
   display: grid;
@@ -41,8 +41,8 @@ h1 {
   margin: unset;
 }
 .icon {
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   cursor: pointer;
 }

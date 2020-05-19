@@ -35,17 +35,17 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Open Sans';
-  font-size: 23px;
-  line-height: 33px;
+  font-size: 1.3em;
+  line-height: 1.5em;
 }
 .section {
   margin: 0 9vw;
 }
 h1 {
   display: block;
-  font-size: 42px;
-  line-height: 54px;
-  margin: 30px 0;
+  font-size: 1.75em;
+  line-height: 2em;
+  margin: 16px 0;
   color: black;
   font-weight: normal;
 }
@@ -56,10 +56,10 @@ h1 {
   cursor: pointer;
 }
 .minor.btn {
-  padding: 14px 36px;
+  padding: 8px 36px;
   border: 1px solid #707070;
   background-color: white;
-  border-radius: 26px;
+  border-radius: 20px;
   text-transform: uppercase;
   cursor: pointer;
   display: flex;
@@ -71,13 +71,13 @@ h1 {
   letter-spacing: 1.56px;
 }
 .circle-btn {
-  width: 129px;
-  height: 129px;
+  width: 100px;
+  height: 100px;
   background-color: white;
   border: 1px solid #707070;
   border-radius: 50%;
   text-align: center;
-  font: 26px/33px 'Open Sans';
+  font: 22px/28px 'Open Sans';
   font-weight: 100;
   letter-spacing: 1.56px;
   color: #595959;

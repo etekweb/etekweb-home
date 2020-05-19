@@ -40,14 +40,14 @@ h1 {
 .gallery {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 360px 360px 360px 177px;
+  grid-template-columns: 320px 320px 320px 130px;
   column-gap: 32px;
   align-items: center;
   justify-items: center;
 }
 .gallery-item {
-  width: 360px;
-  height: 360px;
+  width: 320px;
+  height: 320px;
   border: 1px solid #707070;
   border-radius: 28px;
 }
