@@ -47,12 +47,14 @@ h1 {
 .second .left {
   max-width: 47vw;
 }
+/* Default: Picture beside text, kept at 1/3 device width */
 .second .right {
   align-self: center;
   min-width: 513px;
-  max-width: 36vw;
+  max-width: 34vw;
   margin-left: 32px;
 }
+/* Picture rolls below text, kept at 1/2 device width */
 @media screen and (max-width: 1400px) {
   .second {
     flex-direction: column;
@@ -62,13 +64,15 @@ h1 {
   }
   .second .right {
     max-width: 50vw;
+    margin: 0;
   }
 }
+/* Picture no longer shrinks until device width < 512px */
 @media screen and (max-width: 1024px) {
   .second .right {
     min-width: unset;
     width: 100%;
-    max-width: 513px;
+    max-width: 512px;
   }
 }
 </style>

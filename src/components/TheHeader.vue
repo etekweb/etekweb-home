@@ -28,5 +28,10 @@ export default {
   letter-spacing: 0px;
   color: #FFFFFF;
   text-align: center;
+  text-shadow:
+		-1px -1px 0 #707070,
+		1px -1px 0 #707070,
+		-1px 1px 0 #707070,
+		1px 1px 0 #707070;
 }
 </style>

@@ -1,11 +1,11 @@
 <template>
-  <div class="projects">
+  <div class="projects section">
     <h1>Projects</h1>
     <p class="upper-p">You can take a look at some projects I’ve been involved with below.</p>
     <div class="gallery">
-      <div class="gallery-item" />
-      <div class="gallery-item" />
-      <div class="gallery-item" />
+      <div class="gallery-item one" />
+      <div class="gallery-item two" />
+      <div class="gallery-item three" />
       <div class="circle-btn">View more</div>
     </div>
     <p class="lower-p">
@@ -28,7 +28,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 67px 0;
+  margin-top: 67px;
+  margin-bottom: 67px;
 }
 h1 {
   margin: 0;
@@ -37,6 +38,7 @@ h1 {
   margin-top: 16px;
   margin-bottom: 40px;
 }
+/* Default: Three items plus button inline */
 .gallery {
   display: grid;
   grid-auto-flow: column;
@@ -53,5 +55,34 @@ h1 {
 }
 .lower-p {
   margin-top: 40px;
+}
+/* Two items plus button inline */
+@media screen and (max-width: 1230px) {
+  .gallery {
+    grid-template-columns: 320px 320px 130px;
+  }
+  .gallery-item.three {
+    display: none;
+  }
+}
+/* One item plus button inline */
+@media screen and (max-width: 880px) {
+  .gallery {
+    grid-template-columns: 320px 100px;
+  }
+  .gallery-item.two {
+    display: none;
+  }
+}
+/* One item plus button on separate rows */
+@media screen and (max-width: 500px) {
+  .gallery {
+    grid-template-columns: auto;
+    grid-template-rows: 320px 80px;
+    row-gap: 16px;
+  }
+  .gallery-item.two {
+    display: none;
+  }
 }
 </style>

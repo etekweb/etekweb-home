@@ -87,4 +87,21 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+/* Lower font sizes on smaller screens */
+@media screen and (max-width: 950px) {
+  #app {
+    font-size: 1.1em;
+    line-height: 1.3em;
+  }
+  .minor.btn {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .circle-btn {
+    width: 80px;
+    height: 80px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
 </style>

@@ -52,7 +52,8 @@ h1 {
   background-color: black;
   margin: 0 15px;
 }
-@media screen and (max-width: 980px) {
+/* Social buttons and resume button on separate lines */
+@media screen and (max-width: 950px) {
   .divider {
     display: none;
   }
@@ -65,10 +66,15 @@ h1 {
     justify-self: center;
   }
 }
+/* Text, social buttons, then resume button, all separate lines */
 @media screen and (max-width: 515px) {
+  .social {
+    row-gap: 16px;
+  }
   h1 {
     grid-column: 1 / 3;
     justify-self: center;
+    line-height: 1em;
   }
   .icon {
     grid-row: 2 / 3;
@@ -80,6 +86,7 @@ h1 {
     justify-self: left;
   }
   .minor.btn {
+    margin-top: 32px;
     grid-row: 3 / 4;
     grid-column: 1 / 3;
   }

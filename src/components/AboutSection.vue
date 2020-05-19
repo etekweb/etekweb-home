@@ -35,10 +35,12 @@
   max-width: 57vw;
   margin-right: 4vw;
 }
+/* Default: Profile picture beside text, kept at 1/4 device width */
 .profile-img {
-  width: 22vw;
+  width: 25vw;
   align-self: center;
 }
+/* Profile picture rolls below text, kept at 1/3 device width */
 @media screen and (max-width: 1360px) {
   .about {
     flex-direction: column;
@@ -50,15 +52,11 @@
     width: 34vw;
   }
 }
+/* Profile picture no longer shrinks until device width < 345px */
 @media screen and (max-width: 1015px) {
   .profile-img {
-    width: 50vw;
-    max-width: 345px;
-  }
-}
-@media screen and (max-width: 670px) {
-  .profile-img {
     width: 100%;
+    max-width: 345px;
   }
 }
 </style>
