@@ -28,7 +28,6 @@
 
 <style scoped>
 .about {
-  margin-top: 55px;
   display: flex;
 }
 .about-text {

@@ -5,6 +5,7 @@
     <SocialsAndResume />
     <ExperienceSection />
     <ProjectsSection />
+    <BlogSection />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import AboutSection from '@/components/AboutSection.vue';
 import SocialsAndResume from '@/components/SocialsAndResume.vue';
 import ExperienceSection from '@/components/ExperienceSection.vue';
 import ProjectsSection from '@/components/ProjectsSection.vue';
+import BlogSection from '@/components/BlogSection.vue';
 
 export default {
   name: 'App',
@@ -22,7 +24,8 @@ export default {
     AboutSection,
     SocialsAndResume,
     ExperienceSection,
-    ProjectsSection
+    ProjectsSection,
+    BlogSection
   }
 };
 </script>
@@ -44,12 +47,12 @@ br {
   line-height: 1.5em;
 }
 .section {
-  margin: 0 9vw;
+  margin: 50px 9vw;
 }
 h1 {
   display: block;
   font-size: 1.75em;
-  line-height: 2em;
+  line-height: 1.25em;
   margin: 16px 0;
   color: black;
   font-weight: normal;
@@ -60,8 +63,8 @@ h1 {
   font-weight: bolder;
   cursor: pointer;
 }
-.minor.btn {
-  padding: 8px 36px;
+.btn {
+  padding: 34px 60px;
   border: 1px solid #707070;
   background-color: white;
   border-radius: 20px;
@@ -70,10 +73,14 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font: 23px/33px "Open Sans";
+  font: 26px/33px "Open Sans";
   font-weight: 100;
   color: #595959;
   letter-spacing: 1.56px;
+}
+.minor.btn {
+  padding: 8px 36px;
+  font-size: 23px;
 }
 .circle-btn {
   width: 100px;

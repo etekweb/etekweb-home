@@ -28,8 +28,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 67px;
-  margin-bottom: 67px;
 }
 h1 {
   margin: 0;
