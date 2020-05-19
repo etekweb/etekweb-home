@@ -1,7 +1,7 @@
 <template>
   <div class="blog">
     <div class="post">
-
+      ...
       <div class="minor btn">Read On</div>
     </div>
     <h1>Blog</h1>
@@ -19,13 +19,13 @@ export default {
 .blog {
   background-color: #F0F2F2;
   display: grid;
-  grid-template-columns: 1000px 380px;
+  justify-content: center;
+  grid-template-columns: 980px 380px;
   grid-template-rows: 65px auto;
-  gap: 40px 67px;
+  gap: 40px;
   padding: 50px 9vw;
 }
 .post {
-  width: 980px;
   height: 320px;
   background-color: white;
   grid-row: 1 / 3;
@@ -40,5 +40,32 @@ export default {
 }
 .more-posts {
   height: 28px;
+}
+@media screen and (max-width: 1440px) {
+  .blog {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 200px 130px;
+  }
+  .post {
+    grid-row: 2 / 3;
+    height: 200px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .more-posts {
+    width: 260px;
+    margin-top: 32px;
+    justify-self: center;
+  }
+}
+@media screen and (max-width: 950px) {
+  .blog {
+    grid-template-rows: 50px 200px 110px;
+  }
+  .more-posts {
+    width: 220px;
+    height: unset;
+  }
 }
 </style>

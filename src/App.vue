@@ -105,6 +105,10 @@ h1 {
     font-size: 1.1em;
     line-height: 1.3em;
   }
+  .btn {
+    font-size: 21px;
+    line-height: 31px;
+  }
   .minor.btn {
     font-size: 18px;
     line-height: 28px;
