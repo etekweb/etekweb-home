@@ -31,6 +31,11 @@ export default {
 html, body {
   margin: 0;
 }
+br {
+  content: " ";
+  display: block;
+  margin: 0.25em;
+}
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
