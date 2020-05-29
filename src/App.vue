@@ -5,6 +5,7 @@
     <SocialsAndResume />
     <ExperienceSection />
     <ProjectsSection />
+    <InterestsSection />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import AboutSection from '@/components/AboutSection.vue';
 import SocialsAndResume from '@/components/SocialsAndResume.vue';
 import ExperienceSection from '@/components/ExperienceSection.vue';
 import ProjectsSection from '@/components/ProjectsSection.vue';
+import InterestsSection from '@/components/InterestsSection.vue';
 
 export default {
   name: 'App',
@@ -23,6 +25,7 @@ export default {
     SocialsAndResume,
     ExperienceSection,
     ProjectsSection,
+    InterestsSection
   }
 };
 </script>
@@ -34,7 +37,7 @@ html, body {
 br {
   content: " ";
   display: block;
-  margin: 0.25em;
+  margin: 0.2em;
 }
 #app {
   -webkit-font-smoothing: antialiased;
@@ -80,13 +83,13 @@ h1 {
   font-size: 23px;
 }
 .circle-btn {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   background-color: white;
   border: 1px solid #707070;
   border-radius: 50%;
   text-align: center;
-  font: 22px/28px 'Open Sans';
+  font: 30px/40px 'Open Sans';
   font-weight: 100;
   letter-spacing: 1.56px;
   color: #595959;
@@ -111,8 +114,8 @@ h1 {
     line-height: 28px;
   }
   .circle-btn {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     font-size: 18px;
     line-height: 22px;
   }
