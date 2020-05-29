@@ -2,11 +2,22 @@
   <div class="projects section">
     <h1>Projects</h1>
     <p class="upper-p">You can take a look at some projects I’ve been involved with below.</p>
-    <div class="gallery">
-      <div class="gallery-item one" />
-      <div class="gallery-item two" />
-      <div class="gallery-item three" />
-      <div class="circle-btn">View more</div>
+    <div class="layout">
+      <div class="circle-btn">&lt;</div>
+      <div class="gallery">
+        <div class="gallery-item one" />
+        <div class="gallery-item one" />
+        <div class="gallery-item one" />
+        <div class="gallery-item one" />
+        <div class="gallery-item one" />
+        <div class="gallery-item one" />
+        <div class="gallery-item one" />
+        <div class="gallery-item one" />
+        <div class="gallery-item one" />
+        <div class="gallery-item one" />
+        <div class="gallery-item one" />
+      </div>
+      <div class="circle-btn">&gt;</div>
     </div>
     <p class="lower-p">
       I am always interested in new concepts and building new skills.<br>
@@ -37,11 +48,20 @@ h1 {
   margin-bottom: 40px;
 }
 /* Default: Three items plus button inline */
-.gallery {
+.layout {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 320px 320px 320px 130px;
+  grid-template-columns: 70px 1fr 70px;
   column-gap: 32px;
+  align-items: center;
+  justify-items: center;
+}
+.gallery {
+  display: grid;
+  width: 100%;
+  grid-auto-flow: column;
+  column-gap: 32px;
+  overflow: scroll;
   align-items: center;
   justify-items: center;
 }
@@ -53,34 +73,5 @@ h1 {
 }
 .lower-p {
   margin-top: 40px;
-}
-/* Two items plus button inline */
-@media screen and (max-width: 1230px) {
-  .gallery {
-    grid-template-columns: 320px 320px 130px;
-  }
-  .gallery-item.three {
-    display: none;
-  }
-}
-/* One item plus button inline */
-@media screen and (max-width: 880px) {
-  .gallery {
-    grid-template-columns: 320px 100px;
-  }
-  .gallery-item.two {
-    display: none;
-  }
-}
-/* One item plus button on separate rows */
-@media screen and (max-width: 500px) {
-  .gallery {
-    grid-template-columns: auto;
-    grid-template-rows: 320px 80px;
-    row-gap: 16px;
-  }
-  .gallery-item.two {
-    display: none;
-  }
 }
 </style>
