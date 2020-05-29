@@ -37,7 +37,7 @@ html, body {
 br {
   content: " ";
   display: block;
-  margin: 0.2em;
+  margin: 0.34em;
 }
 #app {
   -webkit-font-smoothing: antialiased;
