@@ -6,6 +6,7 @@
     <ExperienceSection />
     <ProjectsSection />
     <InterestsSection />
+    <ContactSection />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import SocialsAndResume from '@/components/SocialsAndResume.vue';
 import ExperienceSection from '@/components/ExperienceSection.vue';
 import ProjectsSection from '@/components/ProjectsSection.vue';
 import InterestsSection from '@/components/InterestsSection.vue';
+import ContactSection from '@/components/ContactSection.vue';
 
 export default {
   name: 'App',
@@ -25,7 +27,8 @@ export default {
     SocialsAndResume,
     ExperienceSection,
     ProjectsSection,
-    InterestsSection
+    InterestsSection,
+    ContactSection
   }
 };
 </script>
@@ -34,11 +37,11 @@ export default {
 html, body {
   margin: 0;
 }
-br {
+/* br {
   content: " ";
   display: block;
   margin: 0.34em;
-}
+} */
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -119,5 +122,9 @@ h1 {
     font-size: 18px;
     line-height: 22px;
   }
+}
+b {
+  margin: 8px 0;
+  display: inline-block;
 }
 </style>

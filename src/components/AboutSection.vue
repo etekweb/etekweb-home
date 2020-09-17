@@ -9,9 +9,13 @@
       </p>
       <p>
         From a young age, I have taken great interest in technology in various forms, exploring and 
-        learning about all of the many possibilities they contain.<br>
+        learning about all of the many possibilities they contain.
+      </p>
+      <p>
         I experimented with rudimentary web design starting at age seven, 
-        and in sixth grade began learning the basics of HTML, CSS, PHP and MySQL.<br>
+        and in sixth grade began learning the basics of HTML, CSS, PHP and MySQL.
+      </p>
+      <p>
         From there, I took initiative in developing web projects for my community 
         that are in production use today: a registration utility for a middle school enrichment class program, 
         and a trail map system at a local park.

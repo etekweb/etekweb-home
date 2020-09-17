@@ -1,0 +1,129 @@
+<template>
+  <div class="contact-section">
+    <h1>Contact Me</h1>
+    <div class="contact-details">
+      <div class="contact-fields">
+        <span>Your Name</span>
+        <input v-model="name">
+        <span>Your Email</span>
+        <input v-model="email">
+        <span>Subject</span>
+        <input v-model="subject">
+        <span class="message-lbl">
+          Message
+        </span>
+        <textarea rows="8" v-model="message" />
+      </div>
+      <div class="final-section">
+        <vue-recaptcha
+          class="recaptcha"
+          sitekey="6LfCCLUUAAAAADRkxjo3gHcVXlZGouubHmdEpxYa"
+          :loadRecaptchaScript="true"
+          @verify="handleCaptcha"
+          @expired="unhandleCaptcha"
+        />
+        <button class="btn" @click="submit">Send Message</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import VueRecaptcha from 'vue-recaptcha';
+import Axios from 'axios';
+
+export default {
+  data() {
+    return {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+      captcha: ""
+    }
+  },
+  components: {
+    VueRecaptcha 
+  },
+  computed: {
+    readyToSubmit() {
+      if (this.name && this.email && this.subject && this.message && this.captcha) {
+        return true;
+      }
+      return false;
+    }
+  },
+  methods: {
+    handleCaptcha(data) {
+      this.captcha = data;
+    },
+    unhandleCaptcha() {
+      this.captcha = "";
+    },
+    submit() {
+      if (this.readyToSubmit) {
+        Axios.post("https://us-central1-etekweb-7bb7d.cloudfunctions.net/sendMail",
+          {
+            name: this.name,
+            email: this.email,
+            subject: this.subject,
+            message: this.message,
+            'g-recaptcha-response': this.captcha
+          }
+        )
+        .then(() => {
+          console.log('good');
+          alert('Your message was sent successfully!');
+        })
+        .catch((err) => {
+          console.dir(err);
+          alert('Something went wrong when sending your message. Please try again.');
+        })
+      } else {
+        alert('Please ensure all fields are filled before submitting!');
+      }
+    }
+  }
+};
+</script>
+
+<style scoped>
+.contact-section {
+  background-color: #F0F2F2;
+  padding: 60px 10vw 100px 10vw;
+}
+.contact-details {
+  display: flex;
+}
+.contact-fields {
+  display: grid;
+  grid-template-rows: 50px 50px 50px 150px;
+  grid-template-columns: 120px 500px;
+  gap: 16px;
+  align-items: center;
+}
+.contact-fields span {
+  justify-self: right;
+}
+input {
+  height: 30px;
+}
+.final-section {
+  margin-left: 40px;
+}
+.message-lbl {
+  align-self: start;
+  margin-top: 16px;
+}
+@media screen and (max-width: 1234px) {
+  .contact-details {
+    display: unset;
+  }  
+}
+.btn {
+  padding: 14px 40px;
+  font-size: unset;
+  margin-top: 20px;
+  margin-left: auto;
+}
+</style>
