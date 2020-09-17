@@ -5,17 +5,7 @@
     <div class="layout">
       <div class="circle-btn">&lt;</div>
       <div class="gallery">
-        <div class="gallery-item one" />
-        <div class="gallery-item one" />
-        <div class="gallery-item one" />
-        <div class="gallery-item one" />
-        <div class="gallery-item one" />
-        <div class="gallery-item one" />
-        <div class="gallery-item one" />
-        <div class="gallery-item one" />
-        <div class="gallery-item one" />
-        <div class="gallery-item one" />
-        <div class="gallery-item one" />
+        <ProjectItem v-for="(project, index) of projects" :project="project" :key="index" />
       </div>
       <div class="circle-btn">&gt;</div>
     </div>
@@ -27,8 +17,48 @@
 </template>
 
 <script>
-export default {
+import ProjectItem from "@/components/ProjectItem.vue";
 
+export default {
+  components: {
+    ProjectItem,
+  },
+  data() {
+    return {
+      projects: [
+        {
+          name: "Salesforce #Dreamforce",
+          img: "salesforce.png",
+          desc: "Built an interactive display for Salesforce's Customer360 platform, as well as an interactive vending experience for ConAgra and Google Cloud.",
+          languages: ["Vue.js", "HTML/CSS", "Onsite"],
+        },
+        {
+          name: "GM Virtual Solutions Summit",
+          img: "vss.png",
+          desc: "Built a heavily customized event site for GM fleet customers and suppliers.",
+          languages: ["Vue.js", "API Integration", "HTML/CSS"],
+        },
+        {
+          name: "HuskyHunt",
+          img: "hh.png",
+          desc: "Built a site for Michigan Tech students to sell used goods, as well as find rideshares, in the campus community.",
+          languages: ["MTU", "Team Lead", "Django"],
+        },
+        {
+          name: "OnStar Vehicle Insights Demo",
+          img: "ovi.png",
+          desc: "Built an offline-ready site to demonstrate OnStar's fleet management capabilities for GM trade shows.",
+          languages: ["Vue.js", "HTML/CSS"],
+        },
+        {
+          name: "ABB Idea Wall",
+          img: "abb.png",
+          desc: "Built a site for industry professionals to view and share ideas for reducing energy consumption.",
+          languages: ["Vue.js", "HTML/CSS"],
+        },
+      ],
+    };
+  },
 }
 </script>
 
@@ -64,12 +94,6 @@ h1 {
   overflow: scroll;
   align-items: center;
   justify-items: center;
-}
-.gallery-item {
-  width: 320px;
-  height: 320px;
-  border: 1px solid #707070;
-  border-radius: 28px;
 }
 .lower-p {
   margin-top: 40px;
