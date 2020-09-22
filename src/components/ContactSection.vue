@@ -14,13 +14,14 @@
         <textarea rows="8" v-model="message" name="message" />
       </div>
       <div class="final-section">
-        <vue-recaptcha
+        <!-- <vue-recaptcha
           class="recaptcha"
           sitekey="6LfCCLUUAAAAADRkxjo3gHcVXlZGouubHmdEpxYa"
           :loadRecaptchaScript="true"
           @verify="handleCaptcha"
           @expired="unhandleCaptcha"
-        />
+        /> -->
+        <!-- @click="submit" -->
         <button class="btn" type="submit">Send Message</button>
       </div>
     </form>
@@ -32,7 +33,7 @@
 </template>
 
 <script>
-import VueRecaptcha from "vue-recaptcha";
+// import VueRecaptcha from "vue-recaptcha";
 import Axios from "axios";
 
 import CalendarModal from "@/components/CalendarModal.vue";
@@ -51,7 +52,7 @@ export default {
     };
   },
   components: {
-    VueRecaptcha,
+    // VueRecaptcha,
     CalendarModal,
   },
   computed: {
