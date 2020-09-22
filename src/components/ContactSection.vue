@@ -1,17 +1,16 @@
 <template>
   <div class="contact-section">
+    <CalendarModal v-if="showCalModal" @done="showCalModal = false" />
     <h1>Contact Me</h1>
     <div class="contact-details">
       <div class="contact-fields">
         <span>Your Name</span>
-        <input v-model="name">
+        <input v-model="name" />
         <span>Your Email</span>
-        <input v-model="email">
+        <input v-model="email" />
         <span>Subject</span>
-        <input v-model="subject">
-        <span class="message-lbl">
-          Message
-        </span>
+        <input v-model="subject" />
+        <span class="message-lbl">Message</span>
         <textarea rows="8" v-model="message" />
       </div>
       <div class="final-section">
@@ -25,12 +24,18 @@
         <button class="btn" @click="submit">Send Message</button>
       </div>
     </div>
+    <span class="msg">
+      Looking to schedule a meeting?
+      <span class="link" @click="showCalModal = true">Click here</span> to see my free/busy calendar.
+    </span>
   </div>
 </template>
 
 <script>
-import VueRecaptcha from 'vue-recaptcha';
-import Axios from 'axios';
+import VueRecaptcha from "vue-recaptcha";
+import Axios from "axios";
+
+import CalendarModal from "@/components/CalendarModal.vue";
 
 export default {
   data() {
@@ -39,19 +44,27 @@ export default {
       email: "",
       subject: "",
       message: "",
-      captcha: ""
-    }
+      captcha: "",
+      showCalModal: false,
+    };
   },
   components: {
-    VueRecaptcha 
+    VueRecaptcha,
+    CalendarModal,
   },
   computed: {
     readyToSubmit() {
-      if (this.name && this.email && this.subject && this.message && this.captcha) {
+      if (
+        this.name &&
+        this.email &&
+        this.subject &&
+        this.message &&
+        this.captcha
+      ) {
         return true;
       }
       return false;
-    }
+    },
   },
   methods: {
     handleCaptcha(data) {
@@ -62,34 +75,37 @@ export default {
     },
     submit() {
       if (this.readyToSubmit) {
-        Axios.post("https://us-central1-etekweb-7bb7d.cloudfunctions.net/sendMail",
+        Axios.post(
+          "https://us-central1-etekweb-7bb7d.cloudfunctions.net/sendMail",
           {
             name: this.name,
             email: this.email,
             subject: this.subject,
             message: this.message,
-            'g-recaptcha-response': this.captcha
+            "g-recaptcha-response": this.captcha,
           }
         )
-        .then(() => {
-          console.log('good');
-          alert('Your message was sent successfully!');
-        })
-        .catch((err) => {
-          console.dir(err);
-          alert('Something went wrong when sending your message. Please try again.');
-        })
+          .then(() => {
+            console.log("good");
+            alert("Your message was sent successfully!");
+          })
+          .catch((err) => {
+            console.dir(err);
+            alert(
+              "Something went wrong when sending your message. Please try again."
+            );
+          });
       } else {
-        alert('Please ensure all fields are filled before submitting!');
+        alert("Please ensure all fields are filled before submitting!");
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
 .contact-section {
-  background-color: #F0F2F2;
+  background-color: #f0f2f2;
   padding: 60px 10vw 100px 10vw;
 }
 .contact-details {
@@ -118,12 +134,20 @@ input {
 @media screen and (max-width: 1234px) {
   .contact-details {
     display: unset;
-  }  
+  }
 }
 .btn {
   padding: 14px 40px;
   font-size: unset;
   margin-top: 20px;
   margin-left: auto;
+}
+.msg {
+  font-size: 16px;
+}
+.msg .link {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
 }
 </style>
