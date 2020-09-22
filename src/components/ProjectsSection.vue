@@ -61,7 +61,6 @@ export default {
   },
   methods: {
     scroll(amount) {
-      console.log(this.$refs.gallery);
       this.$refs.gallery.scrollBy({
         left: amount,
         behavior: 'smooth'
