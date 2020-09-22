@@ -1,4 +1,6 @@
-# etekweb-home
+# Ethan Matzdorf: Home
+
+Website coming soon, stay tuned.
 
 ## Project setup
 ```
