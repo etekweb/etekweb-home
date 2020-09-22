@@ -3,8 +3,8 @@
     <h1>Find me on</h1>
     <img class="icon gh" @click="goToGithub" src="@/assets/github.png">
     <img class="icon li" @click="goToLinkedin" src="@/assets/linkedin.png">
-    <div class="divider" />
-    <div class="minor btn" @click="goToResume">Printable Resume</div>
+    <!-- <div class="divider" />
+    <div class="minor btn" @click="goToResume">Printable Resume</div> -->
   </div>
 </template>
 
