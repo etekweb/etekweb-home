@@ -3,15 +3,15 @@
     <h1>Projects</h1>
     <p class="upper-p">You can take a look at some projects I’ve been involved with below.</p>
     <div class="layout">
-      <div class="circle-btn">&lt;</div>
-      <div class="gallery">
+      <div class="circle-btn" @click="scroll(-325)">&lt;</div>
+      <div class="gallery" ref="gallery">
         <ProjectItem v-for="(project, index) of projects" :project="project" :key="index" />
       </div>
-      <div class="circle-btn">&gt;</div>
+      <div class="circle-btn" @click="scroll(325)">&gt;</div>
     </div>
     <p class="lower-p">
       I am always interested in new concepts and building new skills.<br>
-      Have an idea? <span class="link">Let’s talk</span>.
+      Have an idea? <span class="link" @click="$emit('show-contact')">Let’s talk</span>.
     </p>
   </div>
 </template>
@@ -59,6 +59,15 @@ export default {
       ],
     };
   },
+  methods: {
+    scroll(amount) {
+      console.log(this.$refs.gallery);
+      this.$refs.gallery.scrollBy({
+        left: amount,
+        behavior: 'smooth'
+      });
+    }
+  }
 }
 </script>
 

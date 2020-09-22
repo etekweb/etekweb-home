@@ -23,7 +23,7 @@
       <p>
         In college, I have been working for 24G, a digital experience agency, as a JavaScript developer.
         <!-- TODO - add link to section when added -->
-        <span class="link">See what I did there</span>.
+        <span class="link" @click="$emit('show-projects')">See what I did there</span>.
       </p>
     </div>
     <img class="profile-img" src="@/assets/profile.jpg">

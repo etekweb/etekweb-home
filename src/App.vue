@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <TheHeader />
-    <AboutSection />
+    <AboutSection @show-projects="showProjects" />
     <SocialsAndResume />
     <ExperienceSection />
-    <ProjectsSection />
+    <ProjectsSection @show-contact="showContact" ref="projects" />
     <InterestsSection />
-    <ContactSection />
+    <ContactSection ref="contact" />
   </div>
 </template>
 
@@ -29,6 +29,14 @@ export default {
     ProjectsSection,
     InterestsSection,
     ContactSection
+  },
+  methods: {
+    showContact() {
+      this.$refs.contact.$el.scrollIntoView({behavior: 'smooth', block: 'end'});
+    },
+    showProjects() {
+      this.$refs.projects.$el.scrollIntoView({behavior: 'smooth', block: 'center'});
+    },
   }
 };
 </script>
@@ -101,6 +109,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
 }
 /* Lower font sizes on smaller screens */
 @media screen and (max-width: 950px) {
