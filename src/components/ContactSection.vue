@@ -142,16 +142,43 @@ textarea {
   align-self: start;
   margin-top: 16px;
 }
-@media screen and (max-width: 1234px) {
-  .contact-details {
-    display: unset;
-  }
-}
 .btn {
   padding: 14px 40px;
   font-size: unset;
   margin-top: 6px;
   margin-left: auto;
+  margin-bottom: 36px;
+}
+@media screen and (max-width: 1234px) {
+  .contact-details {
+    display: unset;
+  }
+  .btn {
+    margin-left: 345px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .btn {
+    margin-left: 365px;
+  }
+}
+@media screen and (max-width: 795px) {
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .final-section {
+    margin-left: unset;
+  }
+  .contact-fields {
+    grid-template-rows: 24px 50px 24px 50px 24px 50px 24px 160px;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .contact-fields span {
+    justify-self: center;
+    margin-bottom: -16px;
+  }
 }
 .msg {
   font-size: 16px;

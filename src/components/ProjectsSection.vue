@@ -93,6 +93,15 @@ h1 {
   column-gap: 32px;
   align-items: center;
   justify-items: center;
+
+}
+@media screen and (max-width: 700px), (hover: none) {
+  .circle-btn {
+    display: none;
+  }
+  .layout {
+    grid-template-columns: 1fr;
+  }
 }
 .gallery {
   display: grid;
