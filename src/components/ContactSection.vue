@@ -127,6 +127,9 @@ export default {
 input {
   height: 30px;
 }
+input, textarea {
+  font-family: 'Open Sans';
+}
 .final-section {
   margin-left: 40px;
 }
