@@ -124,11 +124,16 @@ export default {
 .contact-fields span {
   justify-self: right;
 }
+input, textarea {
+  border: 1px solid black;
+  font-family: 'Open Sans';
+  border-radius: 3px;
+}
 input {
   height: 30px;
 }
-input, textarea {
-  font-family: 'Open Sans';
+textarea {
+  max-height: 130px;
 }
 .final-section {
   margin-left: 40px;
