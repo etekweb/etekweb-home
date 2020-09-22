@@ -1,6 +1,6 @@
 # Ethan Matzdorf: Home
 
-Website coming soon, stay tuned.
+Repo for my personal website.
 
 ## Project setup
 ```
