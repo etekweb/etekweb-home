@@ -2,16 +2,16 @@
   <div class="contact-section">
     <CalendarModal v-if="showCalModal" @done="showCalModal = false" />
     <h1>Contact Me</h1>
-    <div class="contact-details">
+    <form class="contact-details" action="https://formsubmit.co/1f76f55e81e934d2f67b6ca613097ba2" method="POST">
       <div class="contact-fields">
         <span>Your Name</span>
         <input v-model="name" />
         <span>Your Email</span>
-        <input v-model="email" />
+        <input v-model="email" type="email" name="email" />
         <span>Subject</span>
-        <input v-model="subject" />
+        <input v-model="subject" name="_subject" />
         <span class="message-lbl">Message</span>
-        <textarea rows="8" v-model="message" />
+        <textarea rows="8" v-model="message" name="message" />
       </div>
       <div class="final-section">
         <vue-recaptcha
@@ -21,9 +21,9 @@
           @verify="handleCaptcha"
           @expired="unhandleCaptcha"
         />
-        <button class="btn" @click="submit">Send Message</button>
+        <button class="btn" type="submit">Send Message</button>
       </div>
-    </div>
+    </form>
     <span class="msg">
       Looking to schedule a meeting?
       <span class="link" @click="showCalModal = true">Click here</span> to see my free/busy calendar.
@@ -40,11 +40,13 @@ import CalendarModal from "@/components/CalendarModal.vue";
 export default {
   data() {
     return {
+      // Fields are modeled for future contact form usage
       name: "",
       email: "",
       subject: "",
       message: "",
       captcha: "",
+      // Variable to show/hide the web calendar (link at bottom)
       showCalModal: false,
     };
   },
