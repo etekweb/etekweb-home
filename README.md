@@ -1,6 +1,6 @@
 # Ethan Matzdorf: Home
 
-Repo for my personal website.
+Repo for my personal website. Developed in Vue.js using Vue CLI.
 
 ## Project setup
 ```
