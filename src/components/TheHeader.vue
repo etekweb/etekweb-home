@@ -16,7 +16,7 @@ export default {
   min-height: 400px;
   max-height: 50vh;
   background-image: url('../assets/banner.jpg');
-  background-position-y: bottom;
+  background-position-y: center;
   background-size: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,9 +29,9 @@ export default {
   color: #FFFFFF;
   text-align: center;
   text-shadow:
-		-1px -1px 0 #707070,
-		1px -1px 0 #707070,
-		-1px 1px 0 #707070,
-		1px 1px 0 #707070;
+		-2px -2px 0 #3e3e3e,
+		2px -2px 0 #3e3e3e,
+		-2px 2px 0 #3e3e3e,
+		2px 2px 0 #3e3e3e;
 }
 </style>
