@@ -142,7 +142,7 @@ input {
 .btn {
   padding: 14px 40px;
   font-size: unset;
-  /* margin-top: 20px; */
+  margin-top: 6px;
   margin-left: auto;
 }
 .msg {
