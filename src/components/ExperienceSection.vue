@@ -29,7 +29,7 @@
           and traveled onsite with client-facing experience.
         </p>
         <p>
-          My in-person internship lasted from May-December 2020,
+          My in-person internship lasted from May-December 2019,
           and I am continuing to work remotely with the company.
         </p>
       </div>
