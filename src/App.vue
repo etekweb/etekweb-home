@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <div class="end" />
     <TheHeader />
     <AboutSection @show-projects="showProjects" />
     <SocialsAndResume />
@@ -45,15 +44,6 @@ export default {
 <style>
 html, body {
   margin: 0;
-}
-.end {
-  background-color: black;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
 }
 /* br {
   content: "";
